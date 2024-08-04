@@ -20,10 +20,11 @@ pipeline {
                 '''
             }
         }
-        stage("Test stage"){
-            sh '''
+        stage('Test stage'){
+            steps {
+                sh '''
             npm test
             '''
-        }
+        }}
     }
 }
